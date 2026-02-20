@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Setter with Input">
+        <div class="slds-var-m-around_medium">
+            <lightning-input 
+                label="Enter Institution Name" 
+                value={itemName} 
+                onchange={handleInputChange}>
+            </lightning-input>
+
+            <p class="slds-var-m-top_medium">
+                Internal Value: <strong>{itemName}</strong>
+            </p>
+        </div>
+        {itemName}
+    </lightning-card>
+</template>

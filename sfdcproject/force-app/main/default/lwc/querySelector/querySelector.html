@@ -1,0 +1,14 @@
+<template>
+    <lightning-card  variant="Narrow"  title="Query Selector" icon-name="standard:account">
+        <lightning-button-icon  icon-name="utility:down" variant="border-filled" alternative-text="Show More" slot="actions"></lightning-button-icon>
+        <p> Hello , {greeting}</p>
+
+        <lightning-input label="Name" value={greeting}></lightning-input>
+        <br/>
+    
+        <lightning-button label="Click Me " onclick={handleClick} variant="brand"></lightning-button>
+    
+    </lightning-card>
+    
+    
+</template>

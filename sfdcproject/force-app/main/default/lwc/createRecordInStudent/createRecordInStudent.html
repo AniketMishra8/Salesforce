@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Create Student Record" icon-name="standard:contact">
+        <div style="margin-left: 6%" if:true={error}>
+            <lightning-badge label={error} style="color: red;"></lightning-badge>
+        </div>
+
+        <template if:true={stuRecord}>
+            <div class="slds-m-around_large">
+                <div class="slds-form-element">
+                    <lightning-input label="Student Name" name="Name" value={stuRecord.Name} onchange={inputChangeHandler} required></lightning-input>
+                    
+                    <lightning-input label="Phone Number" name="Phone_Number__c" type="tel" value={stuRecord.Phone_Number__c} onchange={inputChangeHandler}></lightning-input>
+                    
+                    <lightning-input label="Roll Number" name="Roll_Number__c" type="text" value={stuRecord.Roll_Number__c} onchange={inputChangeHandler}></lightning-input>
+                    
+                    <lightning-input label="Student Info" name="Student_Info__c" type="text" value={stuRecord.Student_Info__c} onchange={inputChangeHandler}></lightning-input>
+                </div>
+                <br/>
+                <lightning-button label="Submit" onclick={handleSave} variant="brand"></lightning-button>
+            </div>
+        </template>
+    </lightning-card>
+</template>

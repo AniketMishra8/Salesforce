@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Contact Record">
+        <template if:true={contact}>
+            <p><strong>First Name: </strong> {firstName} </p>
+            <p><strong>Last Name: </strong> {lastName} </p>
+            <p><strong>Email: </strong> {email} </p>
+        </template>
+
+        <template if:true={error}>
+            <p style="color: red">Error Loading Record</p>
+        </template>
+    </lightning-card>
+</template>

@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Track Example">
+        <div class="slds-p-around_medium">
+            <lightning-input label="Enter First Name"
+                            value={fullName.firstName} 
+                            onchange={handleChange}>
+            </lightning-input>
+            <p>Hello, {fullName.firstName} {fullName.lastName}!</p>
+        </div>
+  </lightning-card>
+</template>
