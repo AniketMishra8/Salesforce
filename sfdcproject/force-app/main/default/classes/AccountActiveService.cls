@@ -21,10 +21,13 @@ public with sharing class AccountActiveService {
         // Note: Enclose inline SOQL in Database.query(...) to use USER_MODE in Apex.
         String soql = 'SELECT Id, Name, AccountNumber, Industry, Type ' +
                       'FROM Account ' +
-                      'WHERE Active__c = true ' +
-                      'ORDER BY Name NULLS LAST';
+                      'LIMIT 10';
         List<Account> accts = (List<Account>) Database.query(soql, AccessLevel.USER_MODE);
 
+        for(Account acct : accts) {
+            System.debug(acct);
+        }
+            
         return accts;
     }
 }
